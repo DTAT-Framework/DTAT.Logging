@@ -10,15 +10,17 @@
 
 
 
-		public string Namespace { get; set; }
+		public string LocalIP { get; set; }
 
-		public string ClassName { get; set; }
-
-		public string MethodName { get; set; }
+		public string LocalPort { get; set; }
 
 
 
 		public string RemoteIP { get; set; }
+
+		public string RemotePort { get; set; }
+
+
 
 		public string Username { get; set; }
 
@@ -28,11 +30,19 @@
 
 
 
+		public string Namespace { get; set; }
+
+		public string ClassName { get; set; }
+
+		public string MethodName { get; set; }
+
+
+
 		public string Message { get; set; }
 
-		public string Parameters { get; set; }
-
 		public string Exceptions { get; set; }
+
+		public string Parameters { get; set; }
 
 		public override string ToString()
 		{
@@ -42,6 +52,75 @@
 			//stringBuilder.Append($"<Level>{ Level }</Level>");
 
 			stringBuilder.Append($"<{ nameof(Level) }>{ Level }</{ nameof(Level) }>");
+
+
+
+			if (string.IsNullOrWhiteSpace(LocalIP))
+			{
+				stringBuilder.Append($"<{ nameof(LocalIP) }>NULL</{ nameof(LocalIP) }>");
+			}
+			else
+			{
+				stringBuilder.Append($"<{ nameof(LocalIP) }>{ LocalIP }</{ nameof(LocalIP) }>");
+			}
+
+			if (string.IsNullOrWhiteSpace(LocalPort))
+			{
+				stringBuilder.Append($"<{ nameof(LocalPort) }>NULL</{ nameof(LocalPort) }>");
+			}
+			else
+			{
+				stringBuilder.Append($"<{ nameof(LocalPort) }>{ LocalPort }</{ nameof(LocalPort) }>");
+			}
+
+
+
+			if (string.IsNullOrWhiteSpace(RemoteIP))
+			{
+				stringBuilder.Append($"<{ nameof(RemoteIP) }>NULL</{ nameof(RemoteIP) }>");
+			}
+			else
+			{
+				stringBuilder.Append($"<{ nameof(RemoteIP) }>{ RemoteIP }</{ nameof(RemoteIP) }>");
+			}
+
+			if (string.IsNullOrWhiteSpace(RemotePort))
+			{
+				stringBuilder.Append($"<{ nameof(RemotePort) }>NULL</{ nameof(RemotePort) }>");
+			}
+			else
+			{
+				stringBuilder.Append($"<{ nameof(RemotePort) }>{ RemotePort }</{ nameof(RemotePort) }>");
+			}
+
+
+
+			if (string.IsNullOrWhiteSpace(Username))
+			{
+				stringBuilder.Append($"<{ nameof(Username) }>NULL</{ nameof(Username) }>");
+			}
+			else
+			{
+				stringBuilder.Append($"<{ nameof(Username) }>{ Username }</{ nameof(Username) }>");
+			}
+
+			if (string.IsNullOrWhiteSpace(RequestPath))
+			{
+				stringBuilder.Append($"<{ nameof(RequestPath) }>NULL</{ nameof(RequestPath) }>");
+			}
+			else
+			{
+				stringBuilder.Append($"<{ nameof(RequestPath) }>{ RequestPath }</{ nameof(RequestPath) }>");
+			}
+
+			if (string.IsNullOrWhiteSpace(HttpReferrer))
+			{
+				stringBuilder.Append($"<{ nameof(HttpReferrer) }>NULL</{ nameof(HttpReferrer) }>");
+			}
+			else
+			{
+				stringBuilder.Append($"<{ nameof(HttpReferrer) }>{ HttpReferrer }</{ nameof(HttpReferrer) }>");
+			}
 
 
 
@@ -70,44 +149,6 @@
 			else
 			{
 				stringBuilder.Append($"<{ nameof(MethodName) }>{ MethodName }</{ nameof(MethodName) }>");
-			}
-
-
-
-			if (string.IsNullOrWhiteSpace(RemoteIP))
-			{
-				stringBuilder.Append($"<{ nameof(RemoteIP) }>NULL</{ nameof(RemoteIP) }>");
-			}
-			else
-			{
-				stringBuilder.Append($"<{ nameof(RemoteIP) }>{ RemoteIP }</{ nameof(RemoteIP) }>");
-			}
-
-			if (string.IsNullOrWhiteSpace(RequestPath))
-			{
-				stringBuilder.Append($"<{ nameof(RequestPath) }>NULL</{ nameof(RequestPath) }>");
-			}
-			else
-			{
-				stringBuilder.Append($"<{ nameof(RequestPath) }>{ RequestPath }</{ nameof(RequestPath) }>");
-			}
-
-			if (string.IsNullOrWhiteSpace(HttpReferrer))
-			{
-				stringBuilder.Append($"<{ nameof(HttpReferrer) }>NULL</{ nameof(HttpReferrer) }>");
-			}
-			else
-			{
-				stringBuilder.Append($"<{ nameof(HttpReferrer) }>{ HttpReferrer }</{ nameof(HttpReferrer) }>");
-			}
-
-			if (string.IsNullOrWhiteSpace(Username))
-			{
-				stringBuilder.Append($"<{ nameof(Username) }>NULL</{ nameof(Username) }>");
-			}
-			else
-			{
-				stringBuilder.Append($"<{ nameof(Username) }>{ Username }</{ nameof(Username) }>");
 			}
 
 

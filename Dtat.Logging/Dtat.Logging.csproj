@@ -12,10 +12,21 @@
 		<PackageProjectUrl>https://DTAT.ir</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/DTAT-Framework/DTAT.Logging</RepositoryUrl>
 		<PackageTags>DTAT,Logging,Framework</PackageTags>
+		<Version>1.1.0</Version>
+		<PackageIcon>DTAT03.png</PackageIcon>
+		<PackageIconUrl />
+		<PackageReleaseNotes />
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="C:\Users\dariu\OneDrive\Pictures\DTAT\DTAT03.png">
+	    <Pack>True</Pack>
+	    <PackagePath></PackagePath>
+	  </None>
 	</ItemGroup>
 
 </Project>

@@ -2,24 +2,24 @@
 {
 	public interface ILogger<T> where T : class
 	{
-		void LogTrace
+		bool LogTrace
 			(string message, System.Collections.Hashtable parameters = null);
 
-		void LogDebug
+		bool LogDebug
 			(string message, System.Collections.Hashtable parameters = null);
 
-		void LogInformation
+		bool LogInformation
 			(string message, System.Collections.Hashtable parameters = null);
 
-		void LogWarning
+		bool LogWarning
 			(string message, System.Collections.Hashtable parameters = null);
 
-		void LogError
-			(System.Exception exception = null,
+		bool LogError
+			(System.Exception exception,
 			string message = null, System.Collections.Hashtable parameters = null);
 
-		void LogCritical
-			(System.Exception exception = null,
+		bool LogCritical
+			(System.Exception exception,
 			string message = null, System.Collections.Hashtable parameters = null);
 	}
 }
